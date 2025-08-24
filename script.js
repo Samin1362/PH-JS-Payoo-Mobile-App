@@ -12,7 +12,7 @@ document.getElementById("loginButton").addEventListener("click", (e) => {
   const pinNumberConverted = parseInt(pinNumber);
 
   if (actualMobileNumber === mobileNumberConverted && actualPinNumber === pinNumberConverted){
-    window.location.href = "/PH-JS-Payoo-Mobile-App/home.html";
+    window.location.href = "./home.html";
   } else {
     alert("Invalid Credentials");
   }
