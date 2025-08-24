@@ -1,15 +1,27 @@
+// shared functions 
+
+function getIntValue (id) {
+  return parseInt(document.getElementById(id).value);
+}
+
+function getIntInnerText (id) {
+  return parseInt(document.getElementById(id).innerText);
+}
+
+function getStrValue (id) {
+  return document.getElementById(id).value;
+}
+
 
 // add button 
 document.getElementById("btn-add-money").addEventListener("click", (e) => {
   e.preventDefault();
-  const addBank = document.getElementById("add-bank").value;
-  const addAccountNumber = document.getElementById("add-account-number").value;
-  const addAmount = parseInt(document.getElementById("add-amount").value);
-  const addPinNumber = document.getElementById("add-pin-number").value;
+  const addBank = getStrValue("add-bank");
+  const addAccountNumber = getStrValue("add-account-number");
+  const addAmount = getIntValue("add-amount");
+  const addPinNumber = getStrValue("add-pin-number");
 
-  const availableAmount = parseInt(
-    document.getElementById("available-amount").innerText
-  );
+  const availableAmount = getIntInnerText("available-amount");
   const updatedAmount = availableAmount + addAmount;
 
   document.getElementById("available-amount").innerText = updatedAmount;
@@ -18,8 +30,8 @@ document.getElementById("btn-add-money").addEventListener("click", (e) => {
 // cash out button 
 document.getElementById("btn-cash-out").addEventListener("click", (e) => {
   e.preventDefault();
-  const cashOutAmount = parseInt(document.getElementById("cash-out-amount").value);
-  const availableAmount = parseInt(document.getElementById("available-amount").innerText);
+  const cashOutAmount = getIntValue("cash-out-amount");
+  const availableAmount = getIntInnerText("available-amount");
   document.getElementById("available-amount").innerText = availableAmount - cashOutAmount;
 })
 
