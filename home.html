@@ -26,7 +26,7 @@
     >
       <div class="flex gap-[8px] items-center">
         <div class="max-w-[50px]">
-          <img src="/assets/Group.png" alt="" />
+          <img src="./assets/Group.png" alt="" />
         </div>
         <div>
           <h1 class="font-bold">$<span id="available-amount">45000</span></h1>
@@ -54,19 +54,28 @@
 
     <!-- cards section  -->
     <div class="max-w-lg mx-auto mt-[24px] grid grid-cols-3 grid-rows-2 gap-4">
-      <div id="add-money-button" class="border-2 border-gray-300 p-[25px] rounded-lg bg-white">
+      <div
+        id="add-money-button"
+        class="border-2 border-gray-300 p-[25px] rounded-lg bg-white"
+      >
         <div class="">
-          <img class="w-[25px] mx-auto" src="/assets/wallet1.png" alt="" />
+          <img class="w-[25px] mx-auto" src="./assets/wallet1.png" alt="" />
         </div>
         <h1 class="text-center">Add Money</h1>
       </div>
-      <div id="cashOut-money-button" class="border-2 border-gray-300 p-[25px] rounded-lg bg-white">
+      <div
+        id="cashOut-money-button"
+        class="border-2 border-gray-300 p-[25px] rounded-lg bg-white"
+      >
         <div class="">
-          <img class="w-[25px] mx-auto" src="/assets/send1.png" alt="" />
+          <img class="w-[25px] mx-auto" src="./assets/send1.png" alt="" />
         </div>
         <h1 class="text-center">Cashout</h1>
       </div>
-      <div class="border-2 border-gray-300 p-[25px] rounded-lg bg-white">
+      <div
+        id="transfer-money-button"
+        class="border-2 border-gray-300 p-[25px] rounded-lg bg-white"
+      >
         <div class="">
           <img class="w-[25px] mx-auto" src="./assets/money1.png" alt="" />
         </div>
@@ -80,13 +89,17 @@
       </div>
       <div class="border-2 border-gray-300 p-[25px] rounded-lg bg-white">
         <div class="">
-          <img class="w-[25px] mx-auto" src="/assets/purse1.png" alt="" />
+          <img class="w-[25px] mx-auto" src="./assets/purse1.png" alt="" />
         </div>
         <h1 class="text-center">Pay Bill</h1>
       </div>
       <div class="border-2 border-gray-300 p-[25px] rounded-lg bg-white">
         <div class="">
-          <img class="w-[25px] mx-auto" src="/assets/transaction1.png" alt="" />
+          <img
+            class="w-[25px] mx-auto"
+            src="./assets/transaction1.png"
+            alt=""
+          />
         </div>
         <h1 class="text-center">Transactions</h1>
       </div>
@@ -95,12 +108,12 @@
     <!-- feature section  -->
     <div class="max-w-lg mx-auto mt-4">
       <!-- add money section  -->
-      <div id="add-money-section">
+      <div id="add-money-section" class="form">
         <h1 class="font-bold text-2xl">Add Money</h1>
         <div class="bg-white p-[24px] flex flex-col">
           <label class="font-bold" for="">Select A Bank</label>
           <select id="add-bank" class="select bg-[#F4F5F7] w-full rounded-lg">
-            <option disabled selected>Select back</option>
+            <option disabled selected>Select bank</option>
             <option>City Bank</option>
             <option>Dutch Bangla Bank</option>
             <option>Sonali Bank</option>
@@ -140,10 +153,9 @@
       </div>
 
       <!-- cash out section  -->
-      <div id="cash-out-section" style="display: none;">
+      <div id="cash-out-section" style="display: none" class="form">
         <h1 class="font-bold text-2xl">Cash Out</h1>
         <div class="bg-white p-[24px] flex flex-col">
-
           <label class="font-bold mt-2" for="">Agent Number</label>
           <input
             type="text"
@@ -171,6 +183,41 @@
             class="btn mt-2 bg-[#0874F2] font-bold text-white rounded-lg w-full"
           >
             Withdraw Money
+          </button>
+        </div>
+      </div>
+
+      <!-- transfer money section  -->
+      <div id="transfer-money-section" style="display: none" class="form">
+        <h1 class="font-bold text-2xl">Transfer Money</h1>
+        <div class="bg-white p-[24px] flex flex-col">
+          <label class="font-bold mt-2" for="">User Account Number</label>
+          <input
+            type="text"
+            placeholder="Enter 11 digit number"
+            class="w-full input bg-[#F4F5F7] py-[16px] px-[20px] rounded-lg"
+          />
+
+          <label class="font-bold mt-2" for="">Amount</label>
+          <input
+            id="transfer-money-amount"
+            type="text"
+            placeholder="Enter amount to transfer"
+            class="w-full input bg-[#F4F5F7] py-[16px] px-[20px] rounded-lg"
+          />
+
+          <label class="font-bold mt-2" for="">Pin Number</label>
+          <input
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="w-full input bg-[#F4F5F7] py-[16px] px-[20px] rounded-lg"
+          />
+
+          <button
+            id="btn-transfer-money"
+            class="btn mt-2 bg-[#0874F2] font-bold text-white rounded-lg w-full"
+          >
+            Send Now
           </button>
         </div>
       </div>
