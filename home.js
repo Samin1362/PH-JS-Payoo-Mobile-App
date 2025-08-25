@@ -21,6 +21,18 @@ function handleToggle(id) {
   document.getElementById(id).style.display = "block";
 }
 
+function handleToggleButton(id) {
+  const cardButtons = document.getElementsByClassName("card-button");
+
+  for (const cardButton of cardButtons){
+    cardButton.classList.remove("border-blue-600", "bg-[#F4F5F7]");
+    cardButton.classList.add("border-gray-300", "bg-white");
+  }
+
+  document.getElementById(id).classList.remove("border-gray-300", "bg-white");
+  document.getElementById(id).classList.add("border-blue-600", "bg-[#F4F5F7]");
+}
+
 // add button
 document.getElementById("btn-add-money").addEventListener("click", (e) => {
   e.preventDefault();
@@ -48,20 +60,26 @@ document.getElementById("btn-cash-out").addEventListener("click", (e) => {
 document.getElementById("btn-transfer-money").addEventListener("click", (e) => {
   e.preventDefault();
   const amount = getIntValue("transfer-money-amount");
-  const availableAmount = getIntInnerText("available-amount")
-  document.getElementById("available-amount").innerText = availableAmount - amount;
-})
+  const availableAmount = getIntInnerText("available-amount");
+  document.getElementById("available-amount").innerText =
+    availableAmount - amount;
+});
 
 // implementing toggle feature
 
 document.getElementById("add-money-button").addEventListener("click", (e) => {
   handleToggle("add-money-section");
+  handleToggleButton("add-money-button");
 });
 
-document.getElementById("cashOut-money-button").addEventListener("click", (e) => {
-  handleToggle("cash-out-section");
-});
+document
+  .getElementById("cashOut-money-button").addEventListener("click", (e) => {
+    handleToggle("cash-out-section");
+    handleToggleButton("cashOut-money-button");
+  });
 
-document.getElementById("transfer-money-button").addEventListener("click", (e) => {
-  handleToggle("transfer-money-section");
-})
+document
+  .getElementById("transfer-money-button").addEventListener("click", (e) => {
+    handleToggle("transfer-money-section");
+    handleToggleButton("transfer-money-button");
+  });
