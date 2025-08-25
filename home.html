@@ -81,19 +81,26 @@
         </div>
         <h1 class="text-center">Transfer Money</h1>
       </div>
-      <div class="card-button border-2 border-gray-300 p-[25px] rounded-lg bg-white">
+      <div
+        class="card-button border-2 border-gray-300 p-[25px] rounded-lg bg-white"
+      >
         <div class="">
           <img class="w-[25px] mx-auto" src="./assets/bonus1.png" alt="" />
         </div>
         <h1 class="text-center">Get Bonus</h1>
       </div>
-      <div class="card-button border-2 border-gray-300 p-[25px] rounded-lg bg-white">
+      <div
+        class="card-button border-2 border-gray-300 p-[25px] rounded-lg bg-white"
+      >
         <div class="">
           <img class="w-[25px] mx-auto" src="./assets/purse1.png" alt="" />
         </div>
         <h1 class="text-center">Pay Bill</h1>
       </div>
-      <div class="card-button border-2 border-gray-300 p-[25px] rounded-lg bg-white">
+      <div
+        id="transation-button"
+        class="card-button border-2 border-gray-300 p-[25px] rounded-lg bg-white"
+      >
         <div class="">
           <img
             class="w-[25px] mx-auto"
@@ -220,6 +227,12 @@
             Send Now
           </button>
         </div>
+      </div>
+
+      <!-- transaction history section  -->
+      <div id="transation-history-section" style="display: none" class="form pb-6">
+        <h1 class="font-bold text-2xl">Transaction History</h1>
+        <div id="transaction-cards"></div>
       </div>
     </div>
 
