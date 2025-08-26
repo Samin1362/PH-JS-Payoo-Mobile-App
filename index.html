@@ -13,13 +13,19 @@
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
-    <div class="flex flex-col justify-center items-center">
+
+
+  <body class="bg-[#F4F5F7] flex justify-center items-center">
+    
+    <!-- login form section  -->
+    <div class="h-[100vh] flex flex-col justify-center items-center">
+      <!-- form image -->
       <div class="w-full h-[130px] bg-[url(assets/bg.png)] bg-cover flex justify-center items-center">
         <img src="assets/Group.png" alt="">
       </div>
-      <div class="p-5 w-[402px] bg-white rounded-lg">
-        <label for="">Mobile Number</label>
+      <!-- form  -->
+      <div class="p-4 md:p-[32px] w-[350px] md:w-[402px] bg-white rounded-lg">
+        <label class="font-bold" for="">Mobile Number - (ID: 123456)</label>
         <br />
         <input
           id="mobile-number"
@@ -29,16 +35,16 @@
         />
         <br />
         <br />
-        <label for="">4 Digit Pin</label>
+        <label class="font-bold" for="">4 Digit Pin - (Pass: 1234)</label>
         <br />
         <input
           id="pin-number"
           type="text"
           placeholder="Enter 4 Digit Pin"
-          class="mt-2 w-full input bg-[#F4F5F7] py-[16px] px-[20px] rounded-lg"
+          class="my-2 w-full input bg-[#F4F5F7] py-[16px] px-[20px] rounded-lg"
         />
         <br />
-        <button id="loginButton" class="btn mt-2 bg-[#0874F2] text-white rounded-lg w-full">
+        <button id="loginButton" class="btn mt-2 bg-[#0874F2] text-white font-bold rounded-lg w-full">
           Login
         </button>
       </div>
